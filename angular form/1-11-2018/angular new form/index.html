@@ -1,0 +1,121 @@
+<html>
+<head>
+      <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+      <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+<link rel="stylesheet" href="css/main.css">
+    <title>Register Page</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div class="container" ng-app="myApp">
+<div class="col-md-6">
+    <div class="form-area" ng-controller="formCtrl">  
+       <!--  <form role="form" name="angularForm" novalidate ng-submit="submitForm()"> -->
+            <form name="angularForm" novalidate ng-submit="submitForm()"> 
+        <br style="clear:both">
+                    <h3 style="margin-bottom: 25px; text-align: center;">Contact Form</h3>
+
+
+					<div class="form-group">
+                            <label for="firstName"><b>Name</b></label>
+						<input name="fname" ng-model="fname" id="name" type="text" ng-pattern="name_add" ng-required="true" autocomplete="off" placeholder="Full Name" class="form-control" >
+            
+            <span class="red-text" ng-if="angularForm.fname.$error.required && angularForm.fname.$dirty">Name is a required field</span>
+            <span class="red-text" ng-show="angularForm.fname.$error.pattern">Invalid Name</span>
+					</div>
+
+
+
+                        <div class="form-group">
+                            <label for="firstName"><b>Email</b></label>
+                        <input name="email" ng-model="email" id="eml" type="text" ng-pattern="eml_add" ng-required="true" autocomplete="off" placeholder="Email" class="form-control" >
+            
+            <span class="red-text" ng-if="angularForm.email.$error.required && angularForm.email.$dirty">Email is a required field</span>
+            <span class="red-text" ng-show="angularForm.email.$error.pattern">Invalid Email</span>
+                    </div>
+
+
+
+
+
+					<div class="form-group">
+                        <label for="firstName"><b>Password</b></label>
+						<input name="password" ng-model="password" id="passId" type="text" ng-required="true" ng-pattern="pass_add" autocomplete="off" placeholder="Password" class="form-control">
+            
+            <span class="red-text" ng-if="angularForm.password.$error.required && angularForm.password.$dirty">Password is a required field</span>
+            <span class="red-text" ng-show="angularForm.password.$error.pattern">Please enter a Strong password</span>
+            
+					</div>
+
+
+
+
+
+                    <div class="form-group">
+                         <label for="firstName"><b>Phone</b></label>
+                        <input name="contact" ng-model="contact" id="c_num" type="text" ng-required="true" ng-pattern="ph_numbr" autocomplete="off" placeholder="Contact Number" class="form-control">
+            
+            <span class="red-text" ng-if="angularForm.contact.$error.required && angularForm.contact.$dirty">Contact number is a required field</span>
+            <span class="red-text" ng-show="angularForm.contact.$error.pattern">Please enter a 10 digit number</span>
+                    </div>
+
+
+                     <div class="form-group">
+                         <label for="firstName"><b>Address</b></label>
+                        <input name="address" ng-model="address" id="addrid" type="text" ng-required="true"  autocomplete="off" placeholder="Address" class="form-control">
+            
+            <span class="red-text" ng-if="angularForm.address.$error.required && angularForm.address.$dirty">Address is a required field</span>
+            <!-- <span class="red-text" ng-show="inquiryForm.contact.$error.pattern">Please enter a 10 digit number</span> -->
+                    </div>
+
+
+
+
+
+                     <div class="form-group">
+                         <label for="firstName"><b>City</b></label>
+                        <input name="city" ng-model="city" id="cityid" type="text" ng-required="true" ng-pattern="name_add" autocomplete="off" placeholder="City" class="form-control">
+            
+            <span class="red-text" ng-if="angularForm.city.$error.required && angularForm.city.$dirty">City is a required field</span>
+            <span class="red-text" ng-show="angularForm.city.$error.pattern">Please enter a Valid city name</span>
+                    </div>
+
+
+
+
+    <div class="form-group">
+                         <label for="firstName"><b>State</b></label>
+                        <input name="state" ng-model="state" id="stateid" type="text" ng-required="true" ng-pattern="name_add" autocomplete="off" placeholder="state" class="form-control">
+            
+            <span class="red-text" ng-if="angularForm.contact.$error.required && angularForm.contact.$dirty">State is a required field</span>
+            <span class="red-text" ng-show="angularForm.contact.$error.pattern">Please enter a Valid state name</span>
+                    </div>
+
+    <div class="form-group">
+                         <label for="firstName"><b>Pin</b></label>
+                        <input name="pin" ng-model="pin" id="pinid" type="text" ng-required="true" ng-pattern="pin_add" autocomplete="off" placeholder="Pin Number" class="form-control">
+            
+            <span class="red-text" ng-if="angularForm.pin.$error.required && angularForm.contact.$dirty">Pin is a required field</span>
+            <span class="red-text" ng-show="angularForm.pin.$error.pattern">Please enter a 6 digit Pin number</span>
+                    </div>
+
+
+
+
+
+            
+
+
+        <input type="submit" id="submit" name="submit" class="btn btn-primary pull-right" value="save" ng-hide="angularForm.$invalid">
+        </form>
+    </div>
+</div>
+</div>
+
+ <script type="text/javascript" src="app/app.js"></script>
+</body>
+</html>

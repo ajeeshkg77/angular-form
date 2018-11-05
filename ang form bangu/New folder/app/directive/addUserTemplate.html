@@ -1,0 +1,278 @@
+<style>
+.registerForm {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    width: 700px;
+}
+.row {
+    display: flex;
+    position: relative;
+}
+.item {
+    position: relative;
+    width: 100%;
+    margin: 6px 15px;
+    text-align: left;
+}
+input[type=radio] {
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+}
+input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+}
+.radioRow {
+    /* background-color: burlywood; */
+    padding: 5px;
+}
+label {
+    margin-left: 0px;
+    font-size: 18px;
+    font-weight: bold;
+    color: darkslategrey;
+}
+.inputBox {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid silver;
+    border-radius: 3px;
+}
+.note {
+    font-size: 14px;
+    color: rgb(20, 20, 20)!important;
+}
+
+</style>
+
+<div class="registerForm">
+    <h3 class="smallHeading">Register Here</h3>
+    <!-- <form ng-submit="addUser(true)">
+        <div class="row">
+            <div class="item">
+                <label for="firstname">Name</label>
+                <input class="inputBox" type="text" id="firstname" ng-model="user.firstname">
+            </div>
+            n
+        </div>
+        <div class="row">
+            <div class="item">
+                <label for="email">Email</label>
+                <input class="inputBox" type="text" id="email" ng-model="user.email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="item">
+                <label for="password">Password</label>
+                <input class="inputBox" type="text" id="password" ng-model="user.password">
+            </div>
+            <div class="item">
+                <label for="confpass">Confirm Password</label>
+                <input class="inputBox" type="text" id="confpass" ng-model="user.confPassword">
+            </div>
+        </div>
+        <div class="row">
+            <div class="item">
+                <label for="phone">Phone</label>
+                <input class="inputBox" type="text" id="phone" ng-model="user.phone">
+            </div>
+            <div class="item">
+                <label>Gender</label><br>
+                <div class="radioRow">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="item">
+                <label for="addrline1">Address Line 1</label>
+                <input class="inputBox" type="text" id="addrline1" ng-model="user.addressLine1">
+            </div>
+            <div class="item">
+                <label for="addrline2">Address Line 2</label>
+                <input class="inputBox" type="text" id="addrline2" ng-model="user.addressLine2">
+            </div>
+        </div>
+        <div class="row">
+            <div class="item">
+                <label for="city">City</label>
+                <input class="inputBox" type="text" id="city" ng-model="user.city">
+            </div>
+            <div class="item" style="width:423px">
+                <label for="state">State</label><br>
+                <select class="inputBox" id="state">
+                    <option>Choose State...</option>
+                    <option>Kerala</option>
+                    <option>Tamil Nadu</option>
+                    <option>Karnataka</option>
+                </select>
+            </div>
+            <div class="item" style="width:200px">
+                <label for="pin">Pin</label>
+                <input class="inputBox" type="text" id="pin" ng-model="user.pin">
+            </div>
+        </div>
+        <div class="row">
+            <div class="item">
+                <input type="checkbox" id="tc">
+                <label style="vertical-align:top; position: relative; top: 6px;" class="note" for="tc">Agrees the terms and conditions.</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="item" style="text-align:center">
+                <a ng-click="addUser(true)" class="btn center" style="display: inline-block; width: 200px; text-align: center" href="javascript:void(0);"> {{ buttonText }}</a>
+                <a ng-click="addUser(false)" class="btn center" style="display: inline-block; width: 200px; text-align: center" href="javascript:void(0);"> {{ buttonText }} & Continue</a>
+           <form name="angularForm" novalidate ng-submit="addUser(true)"> 
+        <br style="clear:both">
+                    <h3 style="margin-bottom: 25px; text-align: center;">Contact Form</h3>
+
+
+                    <div class="form-group">
+                            <label for="firstName"><b>Name</b></label>
+                        <input name="fname" ng-model="user.name" id="name" type="text" ng-pattern="name_add" ng-required="true" autocomplete="off" placeholder="Full Name" class="form-control" >
+            
+            <span class="red-text" ng-if="angularForm.fname.$error.required && angularForm.fname.$dirty">Name is a required field</span>
+            <span class="red-text" ng-show="angularForm.fname.$error.pattern">Invalid Name</span>
+                    </div>
+
+
+
+                        <div class="form-group">
+                            <label for="firstName"><b>Email</b></label>
+                        <input name="email" ng-model="user.email" id="eml" type="text" ng-pattern="eml_add" ng-required="true" autocomplete="off" placeholder="Email" class="form-control" >
+            
+            <span class="red-text" ng-if="angularForm.email.$error.required && angularForm.email.$dirty">Email is a required field</span>
+            <span class="red-text" ng-show="angularForm.email.$error.pattern">Invalid Email</span>
+                    </div>
+
+
+
+
+
+                    <div class="form-group">
+                        <label for="firstName"><b>Password</b></label>
+                        <input name="password" ng-model="user.password" id="passId" type="text" ng-required="true" ng-pattern="pass_add" autocomplete="off" placeholder="Password" class="form-control">
+            
+            <span class="red-text" ng-if="angularForm.password.$error.required && angularForm.password.$dirty">Password is a required field</span>
+            <span class="red-text" ng-show="angularForm.password.$error.pattern">Please enter a Strong password</span>
+            
+                    </div>
+
+
+
+
+
+                    <div class="form-group">
+                         <label for="firstName"><b>Phone</b></label>
+                        <input name="contact" ng-model="user.phone" id="c_num" type="text" ng-required="true" ng-pattern="ph_numbr" autocomplete="off" placeholder="Contact Number" class="form-control">
+            
+            <span class="red-text" ng-if="angularForm.contact.$error.required && angularForm.contact.$dirty">Contact number is a required field</span>
+            <span class="red-text" ng-show="angularForm.contact.$error.pattern">Please enter a 10 digit number</span>
+                    </div>
+
+
+                     <div class="form-group">
+                         <label for="firstName"><b>Address</b></label>
+                        <input name="address" ng-model="user.address" id="addrid" type="text" ng-required="true"  autocomplete="off" placeholder="Address" class="form-control">
+            
+            <span class="red-text" ng-if="angularForm.address.$error.required && angularForm.address.$dirty">Address is a required field</span>
+            <!- <span class="red-text" ng-show="inquiryForm.contact.$error.pattern">Please enter a 10 digit number</span> -->
+<form name="angularForm" novalidate ng-submit="addUser(true)"> 
+        <br style="clear:both">
+                    <h3 style="margin-bottom: 25px; text-align: center;">Contact Form</h3>
+
+
+                    <div class="form-group">
+                            <label for="firstName"><b>Name</b></label>
+                        <input name="fname" ng-model="user.name" id="name" type="text" ng-pattern="name_add" ng-required="true" autocomplete="off" placeholder="Full Name" class="form-control" >
+            
+            <span class="red-text" ng-if="angularForm.fname.$error.required && angularForm.fname.$dirty">Name is a required field</span>
+            <span class="red-text" ng-show="angularForm.fname.$error.pattern">Invalid Name</span>
+                    </div>
+
+
+
+                        <div class="form-group">
+                            <label for="firstName"><b>Email</b></label>
+                        <input name="email" ng-model="user.email" id="eml" type="text" ng-pattern="eml_add" ng-required="true" autocomplete="off" placeholder="Email" class="form-control" >
+            
+            <span class="red-text" ng-if="angularForm.email.$error.required && angularForm.email.$dirty">Email is a required field</span>
+            <span class="red-text" ng-show="angularForm.email.$error.pattern">Invalid Email</span>
+                    </div>
+
+
+
+
+
+                    <div class="form-group">
+                        <label for="firstName"><b>Password</b></label>
+                        <input name="password" ng-model="user.password" id="passId" type="text" ng-required="true" ng-pattern="pass_add" autocomplete="off" placeholder="Password" class="form-control">
+            
+            <span class="red-text" ng-if="angularForm.password.$error.required && angularForm.password.$dirty">Password is a required field</span>
+            <span class="red-text" ng-show="angularForm.password.$error.pattern">Please enter a Strong password</span>
+            
+                    </div>
+
+
+
+
+
+                    <div class="form-group">
+                         <label for="firstName"><b>Phone</b></label>
+                        <input name="contact" ng-model="user.phone" id="c_num" type="text" ng-required="true" ng-pattern="ph_numbr" autocomplete="off" placeholder="Contact Number" class="form-control">
+            
+            <span class="red-text" ng-if="angularForm.contact.$error.required && angularForm.contact.$dirty">Contact number is a required field</span>
+            <span class="red-text" ng-show="angularForm.contact.$error.pattern">Please enter a 10 digit number</span>
+                    </div>
+
+
+                     <div class="form-group">
+                         <label for="firstName"><b>Address</b></label>
+                        <input name="address" ng-model="user.address" id="addrid" type="text" ng-required="true"  autocomplete="off" placeholder="Address" class="form-control">
+            
+            <span class="red-text" ng-if="angularForm.address.$error.required && angularForm.address.$dirty">Address is a required field</span>
+           
+                    </div>
+                     <div class="form-group">
+                         <label for="firstName"><b>City</b></label>
+                        <input name="city" ng-model="user.city" id="cityid" type="text" ng-required="true" ng-pattern="name_add" autocomplete="off" placeholder="City" class="form-control">
+            
+            <span class="red-text" ng-if="angularForm.city.$error.required && angularForm.city.$dirty">City is a required field</span>
+            <span class="red-text" ng-show="angularForm.city.$error.pattern">Please enter a Valid city name</span>
+                    </div>
+
+
+
+
+    <div class="form-group">
+                         <label for="firstName"><b>State</b></label>
+                        <input name="state" ng-model="user.state" id="stateid" type="text" ng-required="true" ng-pattern="name_add" autocomplete="off" placeholder="state" class="form-control">
+            
+            <span class="red-text" ng-if="angularForm.contact.$error.required && angularForm.contact.$dirty">State is a required field</span>
+            <span class="red-text" ng-show="angularForm.contact.$error.pattern">Please enter a Valid state name</span>
+                    </div>
+
+    <div class="form-group">
+                         <label for="firstName"><b>Pin</b></label>
+                        <input name="pin" ng-model="user.pin" id="pinid" type="text" ng-required="true" ng-pattern="pin_add" autocomplete="off" placeholder="Pin Number" class="form-control">
+            
+            <span class="red-text" ng-if="angularForm.pin.$error.required && angularForm.contact.$dirty">Pin is a required field</span>
+            <span class="red-text" ng-show="angularForm.pin.$error.pattern">Please enter a 6 digit Pin number</span>
+                    </div>
+            
+
+
+      <!--   <input type="submit" id="submit" name="submit" class="btn btn-primary pull-right" value="save" ng-hide="angularForm.$invalid">  -->
+        <a ng-click="addUser(true)" class="btn center" style="display: inline-block; width: 200px; text-align: center" href="javascript:void(0);" ng-hide="angularForm.$invalid"> {{ buttonText }}</a>
+                <a ng-click="addUser(false)" class="btn center" style="display: inline-block; width: 200px; text-align: center" href="javascript:void(0);"> {{ buttonText }} & Continue</a>
+
+        </form>
+
+</div>
+

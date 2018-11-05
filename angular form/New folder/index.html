@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs.angularjs/1.6.9/angular/min.js"></script>
+	<title>Register Page</title>
+  <style>
+    .invalid {
+
+      border-color: #f00!important;
+    /*  border: 10px!important;
+*/    }
+    .valid {
+      border-color: green!important;
+      border: 10px;
+    }
+</style>
+</head>
+<body >
+   	<h1 align="center">Registration</h1>
+    <div ng-app="formApp">
+   <form id="regForm" action="abcd.html" method="get">
+    <div style="background-color:#80ccff; margin: 0px 50px">
+  	<div class="form-group">
+  		<div class="form-group col-md-6">
+      		<label for="firstName"><b>Firstname</b></label>
+      		<input type="text" oninput="nameValidation(this)" class="form-control" id="firstName" placeholder="First Name"  title="Enter a name with only charecters" tabindex="1" autofocus="on">
+    	</div>
+   		<div class="form-group col-md-6">
+      		<label for="secondName"><b>Secondname</b></label>
+      		<input type="text" oninput="nameValidation(this)" class="form-control" id="secondName" placeholder="Second Name" tabindex="2">
+    	</div>
+    	<div class="form-group col-md-6">
+      		<label for="inputEmail4"><b>Email</b></label>
+      		<input type="email" oninput="emailValidation(this)" class="form-control" id="inputEmail4" placeholder="Email"  tabindex="3">
+    	</div>
+    	<div class="form-group col-md-6">
+      		<label for="inputPassword4"><b>Password</b></label>
+      		<input type="password"  oninput="passValidation(this)" class="form-control" id="inputPassword4" placeholder="Password" tabindex="4">
+    	</div>
+   
+   <div  style="margin-left: 15px;margin-right:15px";>
+   <div class="form-row">
+		<div class="form-group col-md-4">
+      		<label for="phonenumber"><b>Phone number</b></label>
+      		<input type="text" oninput="phoneValidation(this)" class="form-control" id="phonenumber"  title="please enter  a phone number that range between 10-12" tabindex="6">
+    	</div>
+			<div class="form-group col-md-2">
+				
+      			<div class="col-sm-10">
+              <label><b>Gender</b></label>
+        			<div class="form-check">
+          				<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked tabindex="5">
+          				<label class="form-check-label" for="gridRadios1"><b>Male</b></label>
+        			</div>
+        		<div class="form-check">
+          			<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" >
+          			<label class="form-check-label" for="gridRadios2"><b>Female</b></label>
+        		</div>
+        		</div>
+    		</div>
+  	</div>
+
+  <div class="form-group">
+  		<label for="inputAddress"><b>Address</b></label>
+    	<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="555 Main Street" oninput="validateCommon(this)" tabindex="8"></textarea>
+  </div>
+  <div class="form-group">
+    	<label for="inputAddress2"><b>Address 2</b></label>
+    	<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Apartment, studio, or floor" oninput="validateCommon(this)" tabindex="7"></textarea >
+
+  </div>
+  <div class="form-row">
+    	<div class="form-group col-md-6">
+      		<label for="inputCity"><b>City</b></label>
+      		<input type="text" class="form-control" id="inputCity" oninput="validateCommon(this)" tabindex="9">
+    	</div>
+
+    	<div class="form-group col-md-6">
+      		<label for="inputState"><b>State</b></label>
+      		<select id="inputState" class="form-control" tabindex="10">
+        	<option selected>Choose...</option>
+        	<option>Kerala</option>
+        	<option>Tamil Nadu</option>
+        	<option>Karnataka</option>
+        	<option>Goa</option>
+      		</select>
+    	</div>
+    	<div class="form-group col-md-6">
+      		<label for="inputZip"><b>Pin</b></label>
+      		<input type="text" oninput="pinValidation(this)" class="form-control" id="inputZip" tabindex="11">
+    	</div>
+  </div>
+<!--   <div class="form-group">
+    	<div class="form-check">
+      		<input class="form-check-input" type="checkbox" id="gridCheck">
+      		<label class="form-check-label" for="gridCheck"><b>Check me out</b></label>
+    	</div>
+  </div> -->
+ <div class="center">
+            <button type="submit" id="signup" class="btn btn-dark" tabindex="12">Sign up</button>
+            <button type="submit" class="btn btn-dark" tabindex="15">Reset</button>
+            <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+          </div>
+  
+</div>
+</div>
+</div>
+</form>
+ <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title" style="color: red";>ERROR!!!</h4>
+          <button type="button" class="close" data-dismiss="modal" tabindex="13">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+         Please fill all mandatory fields with valid inputs
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal" tabindex="13">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+   <!-- <a href="home.html">Back</a> -->
+   <script type="text/javascript" src="app/script.js"></script>
+
+</body>
+</html>

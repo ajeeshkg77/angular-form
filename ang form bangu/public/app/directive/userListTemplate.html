@@ -1,0 +1,48 @@
+
+<style>
+.userList {
+    position: relative;
+    width: 800px;
+    margin: auto;
+}
+table {
+    width: 100%;
+    text-align: left;
+    background: #fff;
+}
+
+thead {
+    background-color: darkslategrey;
+    color: #fff;
+}
+td, th {
+    padding: 5px;
+}
+</style>
+<div class="userList">
+    <h3 class="smallHeading">User List</h3>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="user in userList">
+                <td>{{ $index + 1 }}</td>
+                <td>{{ user.firstname }}</td>
+                <td>{{ user.email }}</td>
+                <td>
+                    
+                    <button ng-click="viewUser(userList.indexOf(user))" class="btn">View</button>
+                    <button ng-click="updateUser(userList.indexOf(user))" class="btn">Edit</button>
+                    <button ng-click="removeUser(userList.indexOf(user))" class="btn">Delete</button>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,140 @@
+<style>
+.registerForm {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    width: 700px;
+}
+.row {
+    display: flex;
+    position: relative;
+}
+.item {
+    position: relative;
+    width: 100%;
+    margin: 6px 15px;
+    text-align: left;
+}
+input[type=radio] {
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+}
+input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+}
+.radioRow {
+    /* background-color: burlywood; */
+    padding: 5px;
+}
+label {
+    margin-left: 0px;
+    font-size: 18px;
+    font-weight: bold;
+    color: darkslategrey;
+}
+.inputBox {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid silver;
+    border-radius: 3px;
+}
+.note {
+    font-size: 14px;
+    color: rgb(20, 20, 20)!important;
+}
+
+</style>
+
+<div class="registerForm">
+    <h3 class="smallHeading">Register Here</h3>
+    <form ng-submit="addUser(true)">
+        <div class="row">
+            <div class="item">
+                <label for="firstname">Firstname</label>
+                <input class="inputBox" type="text" id="firstname" ng-model="user.firstname">
+            </div>
+            <div class="item">
+                <label for="lastname">Lastname</label>
+                <input class="inputBox" type="text" id="lastname" ng-model="user.lastname">
+            </div>
+        </div>
+        <div class="row">
+            <div class="item">
+                <label for="email">Email</label>
+                <input class="inputBox" type="text" id="email" ng-model="user.email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="item">
+                <label for="password">Password</label>
+                <input class="inputBox" type="text" id="password" ng-model="user.password">
+            </div>
+            <div class="item">
+                <label for="confpass">Confirm Password</label>
+                <input class="inputBox" type="text" id="confpass" ng-model="user.confPassword">
+            </div>
+        </div>
+        <div class="row">
+            <div class="item">
+                <label for="phone">Phone</label>
+                <input class="inputBox" type="text" id="phone" ng-model="user.phone">
+            </div>
+            <div class="item">
+                <label>Gender</label><br>
+                <div class="radioRow">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="item">
+                <label for="addrline1">Address Line 1</label>
+                <input class="inputBox" type="text" id="addrline1" ng-model="user.addressLine1">
+            </div>
+            <div class="item">
+                <label for="addrline2">Address Line 2</label>
+                <input class="inputBox" type="text" id="addrline2" ng-model="user.addressLine2">
+            </div>
+        </div>
+        <div class="row">
+            <div class="item">
+                <label for="city">City</label>
+                <input class="inputBox" type="text" id="city" ng-model="user.city">
+            </div>
+            <div class="item" style="width:423px">
+                <label for="state">State</label><br>
+                <select class="inputBox" id="state">
+                    <option>Choose State...</option>
+                    <option>Kerala</option>
+                    <option>Tamil Nadu</option>
+                    <option>Karnataka</option>
+                </select>
+            </div>
+            <div class="item" style="width:200px">
+                <label for="pin">Pin</label>
+                <input class="inputBox" type="text" id="pin" ng-model="user.pin">
+            </div>
+        </div>
+        <div class="row">
+            <div class="item">
+                <input type="checkbox" id="tc">
+                <label style="vertical-align:top; position: relative; top: 6px;" class="note" for="tc">Agrees the terms and conditions.</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="item" style="text-align:center">
+                <a ng-click="addUser(true)" class="btn center" style="display: inline-block; width: 200px; text-align: center" href="javascript:void(0);"> {{ buttonText }}</a>
+                <a ng-click="addUser(false)" class="btn center" style="display: inline-block; width: 200px; text-align: center" href="javascript:void(0);"> {{ buttonText }} & Continue</a>
+                <!-- <input type="submit" class="btn" style="display: inline-block; width: 200px; text-align: center" value="Add User">
+                <input type="submit" class="btn" style="display: inline-block; width: 200px; text-align: center" value="Add User & Continue"> -->
+            </div>
+        </div>
+    </form>
+</div>
+

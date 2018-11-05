@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Admin Panel</title>
+		<script src="node_modules/angular/angular.min.js"></script>
+		<script src="node_modules/angular-route/angular-route.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+	</head>
+	<body ng-app="adminPanel">
+		<header>
+			<h1><a href="#!/">Admin Panel</a></h1>
+			<nav>
+				<ul>
+					<li><a href="#" id="bgChangeBtn">Change BG</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<main ng-controller="mainContr">
+			<ng-view></ng-view>
+		</main>
+		<!-- <div class="hiddenPlace"></div> -->
+	<script type="text/javascript" src="app/main.js"></script>
+	</body>
+</html>

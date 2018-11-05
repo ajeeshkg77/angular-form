@@ -1,0 +1,115 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 50px;
+	user-select: none;
+	background: url("../images/bg10.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	margin: 0;
+	padding: 10px 20px;
+	background-color: #02182B;
+	overflow: hidden;
+	z-index: 10;
+}
+header h1 {
+	margin: 0;
+	font-size: 24px;
+	display: inline;
+}
+header h1 a{
+	color: rgba(255, 255, 255, 0.7);
+	text-decoration: none;
+}
+nav {
+	display: inline-block;
+	float: right;
+	position: relative;
+	top: 5px;
+}
+.nav::after {
+	content: "";
+	float: none;
+}
+.right {
+	float: right;
+}
+.right::after {
+	content: "";
+	clear: right;
+}
+.center {
+	position: relative;
+	margin: auto;
+}
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+nav li {
+	display: inline-block;
+	color: rgba(255, 255, 255, 0.7);
+	padding: 0px 5px;
+}
+nav li a {
+	color: rgba(255, 255, 255, 0.7);
+	text-decoration: none;
+}
+main {
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 5px;
+	padding: 20px;
+	min-height: 300px;
+	margin: auto;
+	margin-top: 80px;
+	width: 90%;
+	word-wrap: break-word;
+}
+.btn {
+	padding: 10px;
+	border: 1px solid gray;
+	background-color: darkslategrey;
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+	cursor: pointer;
+}
+.textInput{
+	width: 100%;
+	margin: 10px 0px;
+	padding: 10px;
+}
+.smallHeading {
+	color: darkslategrey;
+	text-align: center;
+}
+.success {
+	color: green;
+}
+.warning {
+	color: orange;
+}
+.right {
+	float: right;
+}::after {
+	content: "";
+	float: none;
+}
+@media only screen and ( max-width : 1200px ) {
+	body {
+		background-size: auto 100%;
+	}
+	main {
+		width: 98%;
+	}
+}
