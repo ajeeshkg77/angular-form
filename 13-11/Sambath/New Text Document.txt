@@ -1,0 +1,115 @@
+{
+"response_code": 0,
+"results": [
+{
+"category": "General Knowledge",
+"type": "boolean",
+"difficulty": "easy",
+"question": "The Great Wall of China is visible from the moon.",
+"correct_answer": "False",
+"incorrect_answers": [
+"True"
+]
+},
+{
+"category": "General Knowledge",
+"type": "multiple",
+"difficulty": "easy",
+"question": "What word represents the letter &#039;T&#039; in the NATO phonetic alphabet?",
+"correct_answer": "Tango",
+"incorrect_answers": [
+"Target",
+"Taxi",
+"Turkey"
+]
+},
+{
+"category": "General Knowledge",
+"type": "boolean",
+"difficulty": "hard",
+"question": "This is the correct spelling of &quot;Supercalifragilisticexpialidocious&quot;.",
+"correct_answer": "True",
+"incorrect_answers": [
+"False"
+]
+},
+{
+"category": "General Knowledge",
+"type": "multiple",
+"difficulty": "medium",
+"question": "Which language is NOT Indo-European?",
+"correct_answer": "Hungarian",
+"incorrect_answers": [
+"Russian",
+"Greek",
+"Latvian"
+]
+},
+{
+"category": "General Knowledge",
+"type": "boolean",
+"difficulty": "easy",
+"question": "The Lego Group was founded in 1932.",
+"correct_answer": "True",
+"incorrect_answers": [
+"False"
+]
+},
+{
+"category": "General Knowledge",
+"type": "multiple",
+"difficulty": "hard",
+"question": "According to the 2014-2015 Australian Bureau of Statistics, what percentage of Australians were born overseas?",
+"correct_answer": "28%",
+"incorrect_answers": [
+"13%",
+"20%",
+"7%"
+]
+},
+{
+"category": "General Knowledge",
+"type": "multiple",
+"difficulty": "hard",
+"question": "What does the Latin phrase &quot;Veni, vidi, vici&quot; translate into English?",
+"correct_answer": "I came, I saw, I conquered",
+"incorrect_answers": [
+"See no evil, hear no evil, speak no evil",
+"Life, liberty, and happiness",
+"Past, present, and future"
+]
+},
+{
+"category": "General Knowledge",
+"type": "boolean",
+"difficulty": "easy",
+"question": "&quot;27 Club&quot; is a term used to refer to a list of famous actors, musicians, and artists who died at the age of 27.",
+"correct_answer": "True",
+"incorrect_answers": [
+"False"
+]
+},
+{
+"category": "General Knowledge",
+"type": "boolean",
+"difficulty": "hard",
+"question": "Spoon theory is a theory, utilizing &quot;Spoons&quot; as a metaphor for energy they can use in a day.",
+"correct_answer": "True",
+"incorrect_answers": [
+"False"
+]
+},
+{
+"category": "General Knowledge",
+"type": "multiple",
+"difficulty": "hard",
+"question": "If someone said &quot;you are olid&quot;, what would they mean?",
+"correct_answer": "You smell extremely unpleasant.",
+"incorrect_answers": [
+"You are out of shape/weak.",
+"Your appearance is repulsive.",
+"You are incomprehensible/an idiot."
+]
+}
+]
+}
